@@ -1,32 +1,39 @@
 # Basic site information
-site_name: PyTorch Lightning Course           
-site_url: https://lightning-course.com             
-repo_url: https://github.com/marcopeix/pytorch_lightning_course.git  
-# -------------------------------------------------------------------
-# Navigation:
-nav:                            
+site_name: PyTorch Lightning Course
+site_url: https://lightning-course.com
+repo_url: https://github.com/marcopeix/pytorch_lightning_course.git
+
+# Navigation
+nav:
   - Tutorials:
-      - Introduction: Introduction/intro.md     
+      - Introduction: Introduction/intro.md
+
+# Theme: Material with dark-first palette and toggle
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: blue
-      accent: black
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+    # 1) Dark mode is first ⇒ default # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=color
     - scheme: slate
-      primary: blue
-      accent: black
+      primary: blue grey
+      accent:  '#AAAAAA'
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+
+    # 2) Light mode as secondary
+    - scheme: default
+      primary: blue grey
+      accent:  '#AAAAAA'
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
   features:
     - navigation.instant
     - navigation.tabs
     - toc.integrate
 
+# Plugins
 plugins:
   - mkdocs-jupyter:
       ignore_h1_titles: true
@@ -39,6 +46,7 @@ plugins:
             docstring_section_style: table
   - search
 
+# Markdown extensions
 markdown_extensions:
   - admonition
   - codehilite
@@ -47,11 +55,13 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight
 
+# Custom assets
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - javascripts/extra.js
 
+# Site‑wide variables
 extra:
   version: 1.0.0
   author: Ram Surya Yenda
