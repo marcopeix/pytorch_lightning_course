@@ -1,0 +1,56 @@
+/* ------------ */
+/* Dark‑mode header overrides */
+/* ------------ */
+[data-md-color-scheme="slate"] .md-header {
+    background-color: #1F2630;        /* exact DSVM nav bg color */
+    border-bottom: none;              /* remove default border/shadow */
+    padding: 0.5rem 1.5rem;           /* tighten vertical padding */
+  }
+  
+  /* Logo: assume you set `theme.logo: images/dswm-logo.png` in mkdocs.yml */
+  [data-md-color-scheme="slate"] .md-header__inner {
+    align-items: center;              /* vertically center items */
+  }
+  
+  /* Resize the logo */
+  [data-md-color-scheme="slate"] .md-logo {
+    max-height: 2.25rem;              /* about 36px tall */
+    margin-right: 2rem;               /* space before nav */
+  }
+  
+  /* Navigation container: push to right */
+  [data-md-color-scheme="slate"] .md-header-nav {
+    margin-left: auto;
+    display: flex;
+    gap: 1.5rem;                      /* even spacing between links */
+  }
+  
+  /* Nav links: white text, clean font weight */
+  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link {
+    color: #FFFFFF;
+    font-weight: 500;
+    text-transform: none;
+  }
+  
+  /* Hover/active state: light grey accent */
+  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link:hover,
+  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link--active {
+    color: #CCCCCC;
+  }
+  
+  /* If you have a “Log In” or button link, you can style it specially */
+  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 0.25rem;
+    transition: background-color 0.2s;
+  }
+  
+  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  /* Remove the default search icon if you’re using a custom icon */
+  [data-md-color-scheme="slate"] .md-header .md-search {
+    display: none;
+  }
