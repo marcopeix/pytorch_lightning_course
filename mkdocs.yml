@@ -1,0 +1,57 @@
+# Basic site information
+site_name: PyTorch Lightning Course           
+site_url: https://lightning-course.com             
+repo_url: https://github.com/marcopeix/pytorch_lightning_course.git  
+# -------------------------------------------------------------------
+# Navigation:
+nav:                            
+  - Tutorials:
+      - Introduction: Introduction/intro.md     
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - toc.integrate
+
+plugins:
+  - mkdocs-jupyter:
+      ignore_h1_titles: true
+      execute: false
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            docstring_section_style: table
+  - search
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+
+extra:
+  version: 1.0.0
+  author: Ram Surya Yenda
