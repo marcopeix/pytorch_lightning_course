@@ -432,14 +432,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#generate-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generate Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#synthetic-polynomial-regression-dataset-pytorch" class="md-nav__link">
     <span class="md-ellipsis">
       🧪 Synthetic Polynomial Regression Dataset (PyTorch)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🧪 Synthetic Polynomial Regression Dataset (PyTorch)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#data-generation-formula" class="md-nav__link">
@@ -542,6 +551,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
   
 </li>
       
@@ -1082,7 +1100,7 @@ from pytorch_lightning import Trainer</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="synthetic-polynomial-regression-dataset-pytorch">🧪 Synthetic Polynomial Regression Dataset (PyTorch)<a class="anchor-link" href="#synthetic-polynomial-regression-dataset-pytorch">¶</a></h2><p>This synthetic dataset is generated using a <strong>nonlinear polynomial function</strong> with two input features (<code>x1</code>, <code>x2</code>) and a scalar target <code>y</code>. It is ideal for demonstrating regression model training, overfitting behavior, and nonlinear pattern learning using PyTorch or PyTorch Lightning.</p>
+<h2 id="generate-data">Generate Data<a class="anchor-link" href="#generate-data">¶</a></h2><h3 id="synthetic-polynomial-regression-dataset-pytorch">🧪 Synthetic Polynomial Regression Dataset (PyTorch)<a class="anchor-link" href="#synthetic-polynomial-regression-dataset-pytorch">¶</a></h3><p>This synthetic dataset is generated using a <strong>nonlinear polynomial function</strong> with two input features (<code>x1</code>, <code>x2</code>) and a scalar target <code>y</code>. It is ideal for demonstrating regression model training, and nonlinear pattern learning using PyTorch and PyTorch Lightning.</p>
 <hr/>
 <h3 id="data-generation-formula">📐 Data Generation Formula<a class="anchor-link" href="#data-generation-formula">¶</a></h3><p>The target variable <code>y</code> is generated using the following equation:</p>
 <p>The equation for (y) is given by:
@@ -1091,9 +1109,9 @@ y = 10x_{1}^{2} + 5x_{2}^{2} + 2x_{1}x_{2} + 3x_{1} + 4x_{2} + \varepsilon
 $$</p>
 <p>Where the variables are distributed as follows:</p>
 <ul>
-<li>( x_{1} ) follows a continuous uniform distribution between -10 and 10, denoted as (x_{1} \sim \mathcal{U}(-10, 10)).</li>
-<li>( x_{2} ) follows a continuous uniform distribution between 0 and 5, denoted as (x_{2} \sim \mathcal{U}(0, 5)).</li>
-<li>( \varepsilon ) represents Gaussian noise with a mean of 0 and a variance of (2^{2} = 4), denoted as ( \varepsilon \sim \mathcal{N}(0, 2^{2}) ).</li>
+<li>$x_1$ follows a continuous uniform distribution between -10 and 10, denoted as $x_{1} \sim \mathcal{U}(-10, 10)$.</li>
+<li>$ x_{2}$ follows a continuous uniform distribution between 0 and 5, denoted as $x_{2} \sim \mathcal{U}(0, 5)$.</li>
+<li>$\varepsilon$ represents Gaussian noise with a mean of 0 and a variance of $2^{2} = 4$, denoted as $\varepsilon \sim \mathcal{N}(0, 2^{2})$.</li>
 </ul>
 <hr/>
 </div>
@@ -2140,7 +2158,7 @@ plot_regression_results(
 <li><strong>Purpose:</strong> Defines the "forward pass" – how input data <code>x</code> travels through the network's layers to produce an output (prediction). It applies the linear transformations and activation functions sequentially.</li>
 </ul>
 </li>
-<li><p><strong><code>training_step(self, batch, batch_idx)</code></strong></p>
+<li><p><strong><code>training_step(self, batch)</code></strong></p>
 <ul>
 <li><strong>Purpose:</strong> Defines the sequence of operations for <em>one single batch</em> of training data. This is the heart of the learning process within an epoch. It performs these actions:<ul>
 <li>Receives a batch of input features (<code>x</code>) and corresponding true target values (<code>y</code>).</li>
@@ -2688,7 +2706,29 @@ y_test_pred = model(data_module.X_test)
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee9722d5">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f8d01a73">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="conclusion">Conclusion<a class="anchor-link" href="#conclusion">¶</a></h2><p>In conclusion the above content aims to compare the implementation differences between Pytorch and Pytorch Lightning, where pytorch lightning enables researchers and machine learning engineers to train pytorch models at scale with no boiler plate code. Multiple Advantges that we will cover in later modules are:</p>
+<ul>
+<li>Multi GPU training</li>
+<li>checkpointing</li>
+<li>Logging</li>
+<li>Experiment Tracking and Evaluation.</li>
+<li>Automatic Learning rates and batch size finders</li>
+<li>Hyperparameter Tuning</li>
+<li>Custom callbacks</li>
+<li>Mixed Precision Training etc.</li>
+</ul>
+<p><strong>Get Ready for the hands on project</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=48a271bd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
