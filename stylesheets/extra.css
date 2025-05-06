@@ -54,3 +54,61 @@
   [data-md-color-scheme="slate"] .md-header .md-search {
     display: none;
   }
+
+  /* === Math Rendering === */
+.arithmatex {
+  font-size: 1.05em;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: normal;
+}
+
+mjx-container {
+  overflow-x: auto;
+  padding: 0.25rem 0;
+}
+
+/* === Headings === */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+/* === Body Text === */
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* === Code Blocks === */
+code, pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95em;
+}
+
+/* === Notebook Cells === */
+div.cell {
+  margin-bottom: 1.5rem;
+}
+
+/* === Admonition Block Customization === */
+.md-typeset .admonition,
+.md-typeset details {
+  border-left-width: 4px;
+  padding: 0.8em 1em;
+}
+
+/* === Responsive Images and SVG === */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Improve Dark Mode Visibility === */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #121212;
+  --md-typeset-color: #E0E0E0;
+  --md-code-bg-color: #1e1e1e;
+  --md-admonition-bg-color: #2a2a2a;
+}
