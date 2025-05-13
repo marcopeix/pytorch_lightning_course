@@ -1103,15 +1103,19 @@ from pytorch_lightning import Trainer</div>
 <h2 id="generate-data">Generate Data<a class="anchor-link" href="#generate-data">¶</a></h2><h3 id="synthetic-polynomial-regression-dataset-pytorch">🧪 Synthetic Polynomial Regression Dataset (PyTorch)<a class="anchor-link" href="#synthetic-polynomial-regression-dataset-pytorch">¶</a></h3><p>This synthetic dataset is generated using a <strong>nonlinear polynomial function</strong> with two input features (<code>x1</code>, <code>x2</code>) and a scalar target <code>y</code>. It is ideal for demonstrating regression model training, and nonlinear pattern learning using PyTorch and PyTorch Lightning.</p>
 <hr/>
 <h3 id="data-generation-formula">📐 Data Generation Formula<a class="anchor-link" href="#data-generation-formula">¶</a></h3><p>The target variable <code>y</code> is generated using the following equation:</p>
-<p>The equation for (y) is given by:
+<p>The equation for <code>y</code> is given by:
 $$
 y = 10x_{1}^{2} + 5x_{2}^{2} + 2x_{1}x_{2} + 3x_{1} + 4x_{2} + \varepsilon
 $$</p>
+<p>where,
+$$x_1 \sim \mathcal{U}(-10, 10)$$
+$$x_2 \sim \mathcal{U}(0, 5)$$
+$$\varepsilon \sim \mathcal{N}(0, 2^2)$$</p>
 <p>Where the variables are distributed as follows:</p>
 <ul>
-<li>$x_1$ follows a continuous uniform distribution between -10 and 10, denoted as $x_{1} \sim \mathcal{U}(-10, 10)$.</li>
-<li>$x_2$ follows a continuous uniform distribution between 0 and 5, denoted as $x_{2} \sim \mathcal{U}(0, 5)$.</li>
-<li>$\varepsilon$ represents Gaussian noise with a mean of 0 and a variance of $2^{2} = 4$, denoted as $\varepsilon \sim \mathcal{N}(0, 2^{2})$.</li>
+<li>x1 follows a continuous uniform distribution between -10 and 10</li>
+<li>x2 follows a continuous uniform distribution between 0 and 5.</li>
+<li>ε represents Gaussian noise with a mean of 0 and a variance of 4</li>
 </ul>
 <hr/>
 </div>
