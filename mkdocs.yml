@@ -13,18 +13,16 @@ nav:
 theme:
   name: material
   palette:
-    # 1) Dark mode is first ⇒ default # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=color
     - scheme: slate
       primary: blue grey
-      accent:  '#AAAAAA'
+      accent: '#AAAAAA'
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
 
-    # 2) Light mode as secondary
     - scheme: default
       primary: blue grey
-      accent:  '#AAAAAA'
+      accent: '#AAAAAA'
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -55,12 +53,16 @@ markdown_extensions:
       permalink: true
   - pymdownx.superfences
   - pymdownx.highlight
+  - pymdownx.arithmatex:     
+      generic: true
 
 # Custom assets
 extra_css:
   - stylesheets/extra.css
+
 extra_javascript:
   - javascripts/extra.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   # 👈 MathJax script
 
 # Site‑wide variables
 extra:
