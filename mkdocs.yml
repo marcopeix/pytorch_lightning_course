@@ -59,10 +59,12 @@ markdown_extensions:
 # Custom assets
 extra_css:
   - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
 extra_javascript:
-  - javascripts/extra.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js   # 👈 MathJax script
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js 
 
 # Site‑wide variables
 extra:
