@@ -50,6 +50,8 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -484,28 +486,28 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#understanding-the" class="md-nav__link">
+  <a href="#understanding-the-datamodule" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the
+      Understanding the DataModule
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the">
+    <nav class="md-nav" aria-label="Understanding the DataModule">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#breakdown-of-the" class="md-nav__link">
+  <a href="#breakdown-of-the-datamodule" class="md-nav__link">
     <span class="md-ellipsis">
-      **Breakdown of the **
+      Breakdown of the DataModule
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#why-use-a" class="md-nav__link">
+  <a href="#why-use-a-datamodule" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use a ?
+      Why Use a DataModule?
     </span>
   </a>
   
@@ -517,28 +519,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#understanding-the_1" class="md-nav__link">
+  <a href="#understanding-the-lightningmodule" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the
+      Understanding the LightningModule
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Understanding the">
+    <nav class="md-nav" aria-label="Understanding the LightningModule">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#breakdown-of-the_1" class="md-nav__link">
+  <a href="#breakdown-of-the-polynomialregressionlightningmodule" class="md-nav__link">
     <span class="md-ellipsis">
-      **Breakdown of the **
+      Breakdown of the PolynomialRegressionLightningModule
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#why-use-a_1" class="md-nav__link">
+  <a href="#why-use-a-lightningmodule" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Use a ?
+      Why Use a LightningModule?
     </span>
   </a>
   
@@ -1056,7 +1058,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -1107,15 +1109,11 @@ from pytorch_lightning import Trainer</div>
 $$
 y = 10x_{1}^{2} + 5x_{2}^{2} + 2x_{1}x_{2} + 3x_{1} + 4x_{2} + \varepsilon
 $$</p>
-<p>where,
-$$x_1 \sim \mathcal{U}(-10, 10)$$
-$$x_2 \sim \mathcal{U}(0, 5)$$
-$$\varepsilon \sim \mathcal{N}(0, 2^2)$$</p>
 <p>Where the variables are distributed as follows:</p>
 <ul>
-<li>x1 follows a continuous uniform distribution between -10 and 10</li>
-<li>x2 follows a continuous uniform distribution between 0 and 5.</li>
-<li>ε represents Gaussian noise with a mean of 0 and a variance of 4</li>
+<li>$x_1$ follows a continuous uniform distribution between -10 and 10, denoted as $x_{1} \sim \mathcal{U}(-10, 10)$.</li>
+<li>$ x_{2}$ follows a continuous uniform distribution between 0 and 5, denoted as $x_{2} \sim \mathcal{U}(0, 5)$.</li>
+<li>$\varepsilon$ represents Gaussian noise with a mean of 0 and a variance of $2^{2} = 4$, denoted as $\varepsilon \sim \mathcal{N}(0, 2^{2})$.</li>
 </ul>
 <hr/>
 </div>
@@ -1127,7 +1125,7 @@ $$\varepsilon \sim \mathcal{N}(0, 2^2)$$</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-2">
@@ -1913,9 +1911,9 @@ plot_regression_results(
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h3 id="understanding-the-datamodule"><strong>Understanding the <a href="https://lightning.ai/docs/pytorch/stable/data/datamodule.html#lightningdatamodule"><code>DataModule</code></a></strong><a class="anchor-link" href="#understanding-the-datamodule">¶</a></h3><p>In PyTorch Lightning, the <code>LightningDataModule</code> is a convenient way to organize all your data-related steps: loading, splitting, transforming, and creating DataLoaders. It helps keep your data code separate from your model code (<code>LightningModule</code>), making your project cleaner and more reproducible.</p>
+<h3 id="understanding-the-datamodule">Understanding the <a href="https://lightning.ai/docs/pytorch/stable/data/datamodule.html#lightningdatamodule">DataModule</a><a class="anchor-link" href="#understanding-the-datamodule">¶</a></h3><p>In PyTorch Lightning, the <code>LightningDataModule</code> is a convenient way to organize all your data-related steps: loading, splitting, transforming, and creating DataLoaders. It helps keep your data code separate from your model code (<code>LightningModule</code>), making your project cleaner and more reproducible.</p>
 <p>Let's break down the simple <code>DataModule</code> provided for our synthetic regression task.</p>
-<h4 id="breakdown-of-the-datamodule"><strong>Breakdown of the <code>DataModule</code></strong><a class="anchor-link" href="#breakdown-of-the-datamodule">¶</a></h4><ol>
+<h4 id="breakdown-of-the-datamodule">Breakdown of the DataModule<a class="anchor-link" href="#breakdown-of-the-datamodule">¶</a></h4><ol>
 <li><p><strong>Class Definition (<code>class DataModule(LightningDataModule):</code>)</strong></p>
 <ul>
 <li>Our class <code>DataModule</code> inherits from <code>pytorch_lightning.LightningDataModule</code>. This gives it the standard structure expected by the PyTorch Lightning <code>Trainer</code>.</li>
@@ -1942,7 +1940,7 @@ plot_regression_results(
 </ul>
 </li>
 </ol>
-<h4 id="why-use-a-datamodule"><strong>Why Use a <code>DataModule</code>?</strong><a class="anchor-link" href="#why-use-a-datamodule">¶</a></h4><ul>
+<h4 id="why-use-a-datamodule">Why Use a DataModule?<a class="anchor-link" href="#why-use-a-datamodule">¶</a></h4><ul>
 <li><strong>Organization</strong>: Keeps all data-related logic in one place, such as data loading, downloads transformations etc.</li>
 <li><strong>Reusability</strong>: Easily reuse the same data setup for different models.</li>
 <li><strong>Sharing &amp; Reproducibility</strong>: Simplifies sharing data pipelines.</li>
@@ -2143,9 +2141,9 @@ plot_regression_results(
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h3 id="understanding-the-lightningmodule"><strong>Understanding the <a href="https://lightning.ai/docs/pytorch/stable/common/lightning_module.html"><code>LightningModule</code></a></strong><a class="anchor-link" href="#understanding-the-lightningmodule">¶</a></h3><p>In PyTorch Lightning, the <code>LightningModule</code> is the core component where you define your neural network model, how it processes data (<code>forward</code> pass), what happens during training (<code>training_step</code>), how to optimize it (<code>configure_optimizers</code>), and any other logic related to the model's lifecycle and evaluation. It organizes your model code cleanly, separating it from data handling (<code>LightningDataModule</code>) and the training orchestration (<code>Trainer</code>).</p>
+<h3 id="understanding-the-lightningmodule">Understanding the <a href="https://lightning.ai/docs/pytorch/stable/common/lightning_module.html">LightningModule</a><a class="anchor-link" href="#understanding-the-lightningmodule">¶</a></h3><p>In PyTorch Lightning, the <code>LightningModule</code> is the core component where you define your neural network model, how it processes data (<code>forward</code> pass), what happens during training (<code>training_step</code>), how to optimize it (<code>configure_optimizers</code>), and any other logic related to the model's lifecycle and evaluation. It organizes your model code cleanly, separating it from data handling (<code>LightningDataModule</code>) and the training orchestration (<code>Trainer</code>).</p>
 <p>Let's break down the <code>PolynomialRegressionLightningModule</code> provided.</p>
-<h4 id="breakdown-of-the-polynomialregressionlightningmodule"><strong>Breakdown of the <code>PolynomialRegressionLightningModule</code></strong><a class="anchor-link" href="#breakdown-of-the-polynomialregressionlightningmodule">¶</a></h4><ol>
+<h4 id="breakdown-of-the-polynomialregressionlightningmodule">Breakdown of the PolynomialRegressionLightningModule<a class="anchor-link" href="#breakdown-of-the-polynomialregressionlightningmodule">¶</a></h4><ol>
 <li><p><strong><code>__init__(self, input_size, hidden_layers, output_size, lr)</code></strong></p>
 <ul>
 <li><strong>Purpose:</strong> The constructor. It's called when you create an instance of the model (<code>model = PolynomialRegressionLightningModule(...)</code>). It sets up the fundamental building blocks:<ul>
@@ -2198,7 +2196,7 @@ plot_regression_results(
 </ul>
 </li>
 </ol>
-<h4 id="why-use-a-lightningmodule"><strong>Why Use a <code>LightningModule</code>?</strong><a class="anchor-link" href="#why-use-a-lightningmodule">¶</a></h4><ul>
+<h4 id="why-use-a-lightningmodule">Why Use a LightningModule?<a class="anchor-link" href="#why-use-a-lightningmodule">¶</a></h4><ul>
 <li><strong>Organization:</strong> Keeps all model-related logic (architecture, forward pass, training/validation/test steps, optimizer setup) encapsulated in one class.</li>
 <li><strong>Reduced Boilerplate:</strong> Automates the training loop, device handling (CPU/GPU/TPU), and other repetitive tasks, letting you focus on the model logic. Works seamlessly with the <code>Trainer</code>.</li>
 <li><strong>Flexibility &amp; Hooks:</strong> Provides numerous hooks (like <code>on_train_epoch_end</code>, <code>on_fit_start</code>, etc.) to inject custom logic at various points in the training lifecycle.</li>
@@ -2802,9 +2800,11 @@ y_test_pred = model(data_module.X_test)
     
       <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="../../javascripts/extra.js"></script>
+        <script src="../../javascripts/katex.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
