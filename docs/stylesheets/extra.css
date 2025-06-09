@@ -1,61 +1,113 @@
-/* ------------ */
-/* Dark‑mode header overrides */
-/* ------------ */
-[data-md-color-scheme="slate"] .md-header {
-    background-color: #1F2630;        /* exact DSVM nav bg color */
-    border-bottom: none;              /* remove default border/shadow */
-    padding: 0.5rem 1.5rem;           /* tighten vertical padding */
-  }
-  
-  /* Logo: assume you set `theme.logo: images/dswm-logo.png` in mkdocs.yml */
-  [data-md-color-scheme="slate"] .md-header__inner {
-    align-items: center;              /* vertically center items */
-  }
-  
-  /* Resize the logo */
-  [data-md-color-scheme="slate"] .md-logo {
-    max-height: 2.25rem;              /* about 36px tall */
-    margin-right: 2rem;               /* space before nav */
-  }
-  
-  /* Navigation container: push to right */
-  [data-md-color-scheme="slate"] .md-header-nav {
-    margin-left: auto;
-    display: flex;
-    gap: 1.5rem;                      /* even spacing between links */
-  }
-  
-  /* Nav links: white text, clean font weight */
-  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link {
-    color: #FFFFFF;
-    font-weight: 500;
-    text-transform: none;
-  }
-  
-  /* Hover/active state: light grey accent */
-  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link:hover,
-  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link--active {
-    color: #CCCCCC;
-  }
-  
-  /* If you have a “Log In” or button link, you can style it specially */
-  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login {
-    padding: 0.25rem 0.75rem;
-    border: 1px solid #CCCCCC;
-    border-radius: 0.25rem;
-    transition: background-color 0.2s;
-  }
-  
-  [data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login:hover {
-    background-color: rgba(255,255,255,0.1);
-  }
-  
-  /* Remove the default search icon if you’re using a custom icon */
-  [data-md-color-scheme="slate"] .md-header .md-search {
-    display: none;
-  }
+/*
+================================================================================
+  Custom Stylesheet for MkDocs Material Theme
+================================================================================
+*/
 
-  /* === Math Rendering === */
+/* --- Dark‑Mode Header Overrides --- */
+/*
+  The following rules customize the header specifically for the dark theme
+  to match a custom design (e.g., "DSVM nav").
+*/
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #1F2630; /* Custom dark background */
+  border-bottom: none;       /* Remove default bottom border */
+  padding: 0.5rem 1.5rem;    /* Adjust vertical padding */
+}
+
+/* Vertically center logo and navigation items */
+[data-md-color-scheme="slate"] .md-header__inner {
+  align-items: center;
+}
+
+/* Resize the site logo */
+[data-md-color-scheme="slate"] .md-logo {
+  max-height: 2.25rem; /* Approx. 36px tall */
+  margin-right: 2rem;  /* Space between logo and navigation */
+}
+
+/* Push navigation tabs to the right */
+[data-md-color-scheme="slate"] .md-header-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem; /* Space between navigation links */
+}
+
+/* Style main navigation links */
+[data-md-color-scheme="slate"] .md-header-nav .md-nav__link {
+  color: #FFFFFF;
+  font-weight: 500;
+  text-transform: none; /* Keep original case */
+}
+
+/* Style for hovered or active navigation links */
+[data-md-color-scheme="slate"] .md-header-nav .md-nav__link:hover,
+[data-md-color-scheme="slate"] .md-header-nav .md-nav__link--active {
+  color: #CCCCCC; /* Light grey accent */
+}
+
+/* Custom style for a special link, like a "Log In" button */
+[data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+[data-md-color-scheme="slate"] .md-header-nav .md-nav__link.login:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hide the default search icon if using a custom implementation */
+[data-md-color-scheme="slate"] .md-header .md-search {
+  display: none;
+}
+
+
+/* --- Typography & Content --- */
+
+/* General body text styling */
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* General heading styles */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+/* Custom font for code blocks */
+code, pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95em;
+}
+
+/* Responsive images and SVGs */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* --- Jupyter & Markdown Extensions --- */
+
+/* Right-align headings inside rendered Jupyter notebook cells */
+.md-content .jp-RenderedHTMLCommon h1,
+.md-content .jp-RenderedHTMLCommon h2,
+.md-content .jp-RenderedHTMLCommon h3,
+.md-content .jp-RenderedHTMLCommon h4 {
+  text-align: right;
+}
+
+/* Spacing for Jupyter notebook cells */
+div.cell {
+  margin-bottom: 1.5rem;
+}
+
+/* Math rendering container styles (Arithmatex) */
 .arithmatex {
   font-size: 1.05em;
   line-height: 1.6;
@@ -63,52 +115,25 @@
   white-space: normal;
 }
 
+/* MathJax container overflow fix */
 mjx-container {
   overflow-x: auto;
   padding: 0.25rem 0;
 }
 
-/* === Headings === */
-h1, h2, h3, h4 {
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.75em;
-}
-
-/* === Body Text === */
-body {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* === Code Blocks === */
-code, pre {
-  font-family: 'Fira Code', monospace;
-  font-size: 0.95em;
-}
-
-/* === Notebook Cells === */
-div.cell {
-  margin-bottom: 1.5rem;
-}
-
-/* === Admonition Block Customization === */
+/* Admonition block styling */
 .md-typeset .admonition,
 .md-typeset details {
   border-left-width: 4px;
   padding: 0.8em 1em;
 }
 
-/* === Responsive Images and SVG === */
-img, svg {
-  max-width: 100%;
-  height: auto;
-}
 
-/* === Improve Dark Mode Visibility === */
+/* --- Dark Mode Visibility Improvements --- */
+
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #121212;
-  --md-typeset-color: #E0E0E0;
-  --md-code-bg-color: #1e1e1e;
-  --md-admonition-bg-color: #2a2a2a;
+  --md-default-bg-color: #121212;         /* Darker main background */
+  --md-typeset-color: #E0E0E0;            /* Lighter text for readability */
+  --md-code-bg-color: #1e1e1e;            /* Background for code blocks */
+  --md-admonition-bg-color: #2a2a2a;      /* Background for admonitions */
 }
